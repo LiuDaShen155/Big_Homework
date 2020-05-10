@@ -49,8 +49,8 @@ public class searcher extends AppCompatActivity implements View.OnClickListener 
         if (v.getId() == R.id.search_ka) {
             StringBuffer sum = new StringBuffer();
             SQLiteDatabase db;
-            MyHelper ggg = new MyHelper(searcher.this);
-            db = ggg.getWritableDatabase();
+            MyHelper myHelper = new MyHelper(searcher.this);
+            db = myHelper.getWritableDatabase();
             Cursor cursor = db.query("time_id", null,
                     null, null, null, null, null);
             if (cursor.getCount() != 0) {

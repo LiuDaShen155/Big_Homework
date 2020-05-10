@@ -45,20 +45,20 @@ import static android.media.MediaRecorder.VideoSource.CAMERA;
 public class opt extends AppCompatActivity implements View.OnClickListener {
 
     private String ImagePath=null;
-    private Uri imageUri,imageUri_display;
+    private Uri imageUri;
     private Bitmap bp=null;
-    String resule;
+    String result;
     Button btn_pai,btn_xuan;
-    TextView tv_sum;
+    ImageView iv_picture;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opt);
-        Button btn_pai=(Button)findViewById(R.id.take_a_picture);
-        Button btn_xuan=(Button)findViewById(R.id.xuan);
+        btn_pai=(Button)findViewById(R.id.take_a_picture);
+        btn_xuan=(Button)findViewById(R.id.xuan);
         btn_pai.setOnClickListener(this);
         btn_xuan.setOnClickListener(this);
-        ImageView iv_picture=(ImageView)findViewById(R.id.picture);
+        iv_picture=(ImageView)findViewById(R.id.picture);
     }
 
     @RequiresApi(api= Build.VERSION_CODES.M)
@@ -80,7 +80,6 @@ public class opt extends AppCompatActivity implements View.OnClickListener {
             }
             imageUri = Uri.fromFile(outputImage);              //获取Uri
 
-            //   imageUri_display= FileProvider.getUriForFile(opt.this,"com.example.a11630.face_new.fileprovider",outputImage);
 
             ImagePath = outputImage.getAbsolutePath();
             Log.i("拍照图片路径", ImagePath);         //，是传递你要保存的图片的路径，打开相机后，点击拍照按钮，系统就会根据你提供的地址进行保存图片
@@ -139,11 +138,11 @@ public class opt extends AppCompatActivity implements View.OnClickListener {
                     String param = GsonUtils.toJson(map);
 
 
-                    String clientId = "HuTNjUbYeHuOBibawwwDHnwN";
-                    String clientSecret = "c56Xi5qXmzmNcWxiBH6WdObZsbAGoPVp";
+                    String clientId = "x9zlllm8NIDLVOKj6T0EttFm";
+                    String clientSecret = "cklcygSABTFQzbDiW2BIptW5duNeEryk";
                     String accessToken = toolsUnit.getAuth(clientId, clientSecret);
 
-                    String result = HttpUtil.post(url, accessToken, "application/json", param);
+                    result = HttpUtil.post(url, accessToken, "application/json", param);
                     System.out.println("完成:" + result);
 
 

@@ -218,8 +218,8 @@ public class in extends AppCompatActivity implements View.OnClickListener {
 
                     // 注意这里仅为了简化编码每一次请求都去获取access_token，线上环境access_token有过期时间， 客户端可自行缓存，过期后重新获取。
 
-                    String clientId = "HuTNjUbYeHuOBibawwwDHnwN";
-                    String clientSecret = "c56Xi5qXmzmNcWxiBH6WdObZsbAGoPVp";
+                    String clientId = "x9zlllm8NIDLVOKj6T0EttFm";
+                    String clientSecret = "cklcygSABTFQzbDiW2BIptW5duNeEryk";
                     String accessToken = toolsUnit.getAuth(clientId, clientSecret);
 
                     //  = "24.470560ecfc8ded10d622b3dd4e258f34.2592000.1563086633.282335-15236904";

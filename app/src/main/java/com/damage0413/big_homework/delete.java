@@ -54,8 +54,8 @@ public class delete extends AppCompatActivity implements View.OnClickListener {
                     map.put("user_id", S_user);
                     String param = GsonUtils.toJson(map);
 
-                    String clientId = "HuTNjUbYeHuOBibawwwDHnwN";
-                    String clientSecret = "c56Xi5qXmzmNcWxiBH6WdObZsbAGoPVp";
+                    String clientId = "x9zlllm8NIDLVOKj6T0EttFm";
+                    String clientSecret = "cklcygSABTFQzbDiW2BIptW5duNeEryk";
                     String accessToken = toolsUnit.getAuth(clientId, clientSecret);
 
                     String result = HttpUtil.post(url, accessToken, "application/json", param);
